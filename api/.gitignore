@@ -1,0 +1,7 @@
+node_modules
+database.sqlite
+database.sqlite-journal
+uploads/*
+!uploads/.gitkeep
+!uploads/*.svg
+*.sqlite
