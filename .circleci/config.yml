@@ -7,9 +7,9 @@ jobs:
       name: node/default
     steps:
       - checkout
+      - run: cd api
       - node/with-cache:
           steps:
-            - run: cd api          
             - run: npm install
             - run: npm run knex:migrate
             - run: npm run knex:seed
