@@ -7,7 +7,7 @@ jobs:
       name: node/default
     steps:
       - checkout
-      - node:
+      - node/with-cache:
           steps:
             - run: cd api          
             - run: npm install
