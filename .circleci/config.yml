@@ -8,12 +8,10 @@ jobs:
     steps:
       - checkout
       - run: cd api
-      - node/with-cache:
-          steps:
-            - run: npm install
-            - run: npm run knex:migrate
-            - run: npm run knex:seed
-            - run: npm run prod
+      - run: npm install
+      - run: npm run knex:migrate
+      - run: npm run knex:seed
+      - run: npm run prod
 workflows:
     build-and-run:
       jobs:
